@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-evenly',
     width: '100%',
-    padding: '5%',
+    paddingHorizontal: '5%',
     height: '100%',
     backgroundColor: theme.colors.background,
   },

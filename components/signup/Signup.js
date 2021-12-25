@@ -3,7 +3,8 @@ import { View } from 'react-native';
 import { Button, Text, TextInput, Title } from 'react-native-paper';
 import styles from './styles';
 
-export default function Login({ navigation }) {
+export default function Signup({ navigation }) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -13,8 +14,16 @@ export default function Login({ navigation }) {
       </View>
 
       <View style={styles.titleBox}>
-        <Title style={styles.pageTitle}>SIGN IN</Title>
+        <Title style={styles.pageTitle}>SIGN UP</Title>
       </View>
+
+      <TextInput
+        label='Name'
+        placeholder='Name'
+        value={email}
+        onChangeText={setName}
+      />
+
       <TextInput
         label='Email'
         placeholder='Email'
@@ -33,17 +42,18 @@ export default function Login({ navigation }) {
         onPress={() => alert('Hi')}
         style={styles.button}
       >
-        Login
+        Sign Up
       </Button>
+
       <View style={styles.titleBox}>
         <Text>
-          Don't have an account?
+          Already have an account?
           <Text
             style={styles.link}
-            onPress={() => navigation.navigate('Signup')}
+            onPress={() => navigation.navigate('Login')}
           >
             {' '}
-            Sign up
+            Login
           </Text>
         </Text>
       </View>
