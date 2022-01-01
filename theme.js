@@ -1,3 +1,5 @@
-import { DarkTheme } from 'react-native-paper';
+import { DarkTheme } from "react-native-paper";
 
-export default theme = { ...DarkTheme };
+const theme = { ...DarkTheme };
+
+export default theme;
