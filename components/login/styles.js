@@ -1,36 +1,24 @@
 import { StyleSheet } from 'react-native';
-import theme from '../../theme';
-
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'space-evenly',
-    width: '100%',
-    padding: '5%',
-    height: '100%',
-    backgroundColor: theme.colors.background,
-  },
-  titleBox: {
-    justifyContent: 'center',
+  socialButtonContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     width: '100%',
+    paddingHorizontal: '5%',
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    fontFamily: 'sans-serif',
+  lineContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-
-  pageTitle: {
-    fontWeight: 'bold',
-  },
-
-  button: {
-    width: '30%',
-    marginHorizontal: '35%',
+  buttons: {
+    width: '40%',
   },
 
-  link: {
-    color: theme.colors.primary,
+  line: {
+    flex: 1,
+    height: 1,
+    marginHorizontal: 5,
+    backgroundColor: 'white',
   },
 });
 
