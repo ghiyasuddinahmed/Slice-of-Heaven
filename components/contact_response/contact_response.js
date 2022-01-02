@@ -7,7 +7,7 @@ import { useFonts } from "expo-font";
 import globalStyles from "../../globalStyles";
 import styles from "./styles";
 
-export default function ContactResponse({}) {
+export default function ContactResponse({ navigation }) {
   const [loaded] = useFonts({
     LuxuriousRoman: require("../../assets/fonts/LuxuriousRoman-Regular.ttf"),
   });
@@ -26,7 +26,7 @@ export default function ContactResponse({}) {
         icon="page-next-outline"
         mode="contained"
         color={"white"}
-        onPress={() => alert("Hi")}
+        onPress={() => navigation.navigate("Menu")}
         styles={globalStyles.button}
       >
         Continue
