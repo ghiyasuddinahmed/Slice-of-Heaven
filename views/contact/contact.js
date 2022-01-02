@@ -1,30 +1,19 @@
-import { useState } from "react";
-import { View } from "react-native";
-import { Image } from "react-native";
-import { Button, Text, Card, TextInput } from "react-native-paper";
-import logo from "../../assets/logo-transparent.png";
-import { useFonts } from "expo-font";
+import React, { useState } from 'react';
+import { View, Image } from 'react-native';
+import { Button, Text, Card, TextInput } from 'react-native-paper';
+import logo from '../../assets/logo-transparent.png';
 
-import styles from "./styles";
+import styles from './styles';
 
 export default function Contact({ navigation }) {
   const [contactInfo, setInfo] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
-
-  const [loaded] = useFonts({
-    LuxuriousRoman: require("../../assets/fonts/LuxuriousRoman-Regular.ttf"),
-  });
-
-  if (!loaded) {
-    return null;
-  }
 
   const onSubmit = () => {
-    alert("hi");
-    navigation.navigate("Contact_Response");
+    navigation.navigate('Contact_Response');
   };
 
   return (
@@ -33,22 +22,22 @@ export default function Contact({ navigation }) {
         <Image source={logo} style={styles.imageContainer} />
         <View>
           <Text style={styles.response_text}>Get in Touch!</Text>
-          <Text
-            style={{ fontFamily: "LuxuriousRoman" }}
-          >{`We will get back to \nyou as soon as we can.`}</Text>
+          <Text style={styles.font}>
+            {'We will get back to \nyou as soon as we can.'}
+          </Text>
         </View>
       </View>
       <Card style={styles.cards}>
         <TextInput
-          label="Name"
-          placeholder="Name"
+          label='Name'
+          placeholder='Name'
           style={styles.inputField}
           value={contactInfo.name}
           onChangeText={(e) => setInfo({ ...contactInfo, name: e })}
         />
         <TextInput
-          label="Email"
-          placeholder="Email"
+          label='Email'
+          placeholder='Email'
           style={styles.inputField}
           value={contactInfo.email}
           onChangeText={(e) => setInfo({ ...contactInfo, email: e })}
@@ -56,8 +45,8 @@ export default function Contact({ navigation }) {
         <TextInput
           multiline
           numberOfLines={3}
-          label="Message"
-          placeholder="Message"
+          label='Message'
+          placeholder='Message'
           style={styles.inputField}
           value={contactInfo.message}
           onChangeText={(e) => setInfo({ ...contactInfo, message: e })}
@@ -65,9 +54,9 @@ export default function Contact({ navigation }) {
       </Card>
       <View style={styles.btnContainer}>
         <Button
-          icon="send-outline"
-          mode="contained"
-          color={"white"}
+          icon='send-outline'
+          mode='contained'
+          color={'white'}
           onPress={onSubmit}
           style={styles.btn}
         >

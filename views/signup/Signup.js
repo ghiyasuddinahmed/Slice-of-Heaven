@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Button, Text, TextInput, Title } from 'react-native-paper';
 import globalStyles from '../../globalStyles';
@@ -40,9 +40,7 @@ export default function Signup({ navigation }) {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button mode='contained' onPress={() => alert('Hi')}>
-        Sign Up
-      </Button>
+      <Button mode='contained'>Sign Up</Button>
 
       <View style={globalStyles.titleBox}>
         <Text>

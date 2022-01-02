@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Button, Text, TextInput, Title } from 'react-native-paper';
 import globalStyles from '../../globalStyles';

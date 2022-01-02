@@ -1,43 +1,36 @@
-import React, { useState } from "react";
-import { View } from "react-native";
-import { Image } from "react-native";
-import { Button, Text, Card, DataTable } from "react-native-paper";
-import logo from "../../assets/logo-transparent.png";
-import { useFonts } from "expo-font";
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import { Image } from 'react-native';
+import { Text, Card, DataTable } from 'react-native-paper';
+import logo from '../../assets/logo-transparent.png';
 
-import styles from "./styles";
+import styles from './styles';
 
 export default function OrderHistory({ navigation }) {
-  const [orders, setOrders] = useState([
+  const [orders] = useState([
     {
-      name: "A",
+      name: 'A',
       Calories: 23,
       Fat: 2,
     },
     {
-      name: "A",
+      name: 'A',
       Calories: 23,
       Fat: 2,
     },
     {
-      name: "A",
+      name: 'A',
       Calories: 23,
       Fat: 2,
     },
     {
-      name: "A",
+      name: 'A',
       Calories: 23,
       Fat: 2,
     },
   ]);
   const [page, setPage] = useState(0);
-  const [loaded] = useFonts({
-    LuxuriousRoman: require("../../assets/fonts/LuxuriousRoman-Regular.ttf"),
-  });
 
-  if (!loaded) {
-    return null;
-  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -66,8 +59,8 @@ export default function OrderHistory({ navigation }) {
           <DataTable.Pagination
             page={page}
             numberOfPages={2}
-            onPageChange={(page) => setPage(page)}
-            label="1-2 of 6"
+            onPageChange={(newPage) => setPage(newPage)}
+            label='1-2 of 6'
             itemsPerPage={0}
             showFastPagination
           />
