@@ -7,6 +7,15 @@ import globalStyles from '../../globalStyles';
 import styles from './styles';
 
 export default function ContactResponse({ navigation }) {
+
+  const [loaded] = useFonts({
+    LuxuriousRoman: require("../../assets/fonts/LuxuriousRoman-Regular.ttf"),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.imageContainer} />
