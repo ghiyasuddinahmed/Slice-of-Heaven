@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
   return (
     <View style={globalStyles.container}>
       <View style={globalStyles.titleBox}>
-        <Title style={globalStyles.title}>SLICE OF HEAVEN</Title>
+        <Title style={[styles.font, globalStyles.title]}>SLICE OF HEAVEN</Title>
       </View>
       <View style={globalStyles.titleBox}>
         <Title style={globalStyles.pageTitle}>SIGN IN</Title>
@@ -31,7 +31,10 @@ export default function Login({ navigation }) {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button mode='contained' onPress={() => alert('Hi')}>
+      <Button
+        mode='contained'
+        onPress={() => navigation.navigate('Contact_Response')}
+      >
         Login
       </Button>
       <View style={styles.lineContainer}>
