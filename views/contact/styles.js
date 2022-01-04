@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
     fontFamily: "LuxuriousRoman",
     fontSize: 20,
   },
+  font: {
+    fontFamily: "LuxuriousRoman",
+  },
   cards: {
     marginHorizontal: 5,
     backgroundColor: theme.colors.background,

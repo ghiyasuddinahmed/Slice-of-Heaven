@@ -1,11 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
+import theme from "../../theme";
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '5%',
-    height: '100%',
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "5%",
+    height: "100%",
     backgroundColor: theme.colors.background,
   },
   imageContainer: {
@@ -13,19 +14,19 @@ const styles = StyleSheet.create({
     height: 350,
   },
   response_text: {
-    fontFamily: 'LuxuriousRoman',
+    fontFamily: "LuxuriousRoman",
     fontSize: 14,
   },
   cards: {
-    marginBottom: '10%',
+    marginBottom: "10%",
     backgroundColor: theme.colors.background,
     borderBottomWidth: 3,
     borderLeftWidth: 1,
     borderRightWidth: 1,
-    borderColor: 'white',
+    borderColor: "white",
     borderRadius: 50,
     padding: 12,
-    height: '14%',
+    height: "14%",
   },
 });
 
