@@ -1,10 +1,12 @@
-import { ScrollView, View, Image } from "react-native";
+import { ScrollView, View, Image, TouchableOpacity } from "react-native";
 import { Card, Title, Text } from "react-native-paper";
 import globalStyles from "../../globalStyles";
 import styles from "./styles";
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo-transparent.png";
 import { Rating } from "react-native-elements";
+import { Store, Menu as DominoMenu } from "dominos";
+
 export default function Menu({ navigation }) {
   return (
     <View style={globalStyles.container}>
@@ -16,7 +18,7 @@ export default function Menu({ navigation }) {
       </View>
       <View style={styles.scrollViewContainer}>
         <ScrollView>
-          <View style={styles.container}>
+          <TouchableOpacity style={styles.container}>
             <Card style={styles.cards}>
               <Card.Content>
                 <Text>Image will go Here</Text>
@@ -29,9 +31,9 @@ export default function Menu({ navigation }) {
               </View>
               <Rating showRating imageSize={20} tintColor='#121212' />
             </View>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.container}>
+          <TouchableOpacity style={styles.container}>
             <Card style={styles.cards}>
               <Card.Content>
                 <Text>Image will go Here</Text>
@@ -44,9 +46,9 @@ export default function Menu({ navigation }) {
               </View>
               <Rating showRating imageSize={20} tintColor='#121212' />
             </View>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.container}>
+          <TouchableOpacity style={styles.container}>
             <Card style={styles.cards}>
               <Card.Content>
                 <Text>Image will go Here</Text>
@@ -59,9 +61,9 @@ export default function Menu({ navigation }) {
               </View>
               <Rating showRating imageSize={20} tintColor='#121212' />
             </View>
-          </View>
+          </TouchableOpacity>
 
-          <View style={styles.container}>
+          <TouchableOpacity style={styles.container}>
             <Card style={styles.cards}>
               <Card.Content>
                 <Text>Image will go Here</Text>
@@ -74,7 +76,7 @@ export default function Menu({ navigation }) {
               </View>
               <Rating showRating imageSize={20} tintColor='#121212' />
             </View>
-          </View>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     </View>

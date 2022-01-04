@@ -21,7 +21,7 @@ export default function Signup({ navigation }) {
           password
         );
         if (userCred.user !== null) {
-          navigation.navigate("Menu");
+          navigation.replace("Menu");
         }
       } catch (err) {
         Alert.alert(err);

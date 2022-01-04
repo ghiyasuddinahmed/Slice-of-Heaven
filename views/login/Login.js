@@ -12,7 +12,10 @@ export default function Login({ navigation }) {
 
   const handleLogin = async () => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const res = await signInWithEmailAndPassword(auth, email, password);
+      if (res._tokenResponse) {
+        navigation.replace("Menu");
+      }
     } catch (err) {
       Alert.alert(err);
     }
@@ -50,14 +53,6 @@ export default function Login({ navigation }) {
           <Text>OR</Text>
         </View>
         <View style={styles.line} />
-      </View>
-      <View style={styles.socialButtonContainer}>
-        <Button mode='contained' style={styles.buttons}>
-          Facebook
-        </Button>
-        <Button mode='contained' style={styles.buttons}>
-          Google
-        </Button>
       </View>
 
       <View style={globalStyles.centerBox}>
