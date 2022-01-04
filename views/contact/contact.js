@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { View, Image } from 'react-native';
-import { Button, Text, Card, TextInput } from 'react-native-paper';
-import logo from '../../assets/logo-transparent.png';
+import React, { useState } from "react";
+import { View, Image } from "react-native";
+import { Button, Text, Card, TextInput } from "react-native-paper";
+import logo from "../../assets/logo-transparent.png";
 
-import styles from './styles';
+import styles from "./styles";
 
 export default function Contact({ navigation }) {
   const [contactInfo, setInfo] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const onSubmit = () => {
-    navigation.navigate('Contact_Response');
+    navigation.navigate("Contact_Response");
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Contact({ navigation }) {
         <View>
           <Text style={styles.response_text}>Get in Touch!</Text>
           <Text style={styles.font}>
-            {'We will get back to \nyou as soon as we can.'}
+            {"We will get back to \nyou as soon as we can."}
           </Text>
         </View>
       </View>
@@ -56,7 +56,7 @@ export default function Contact({ navigation }) {
         <Button
           icon='send-outline'
           mode='contained'
-          color={'white'}
+          color={"white"}
           onPress={onSubmit}
           style={styles.btn}
         >

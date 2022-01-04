@@ -1,20 +1,20 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React from 'react';
-import { Provider } from 'react-native-paper';
-import theme from './theme';
-import Login from './views/login/Login';
-import Signup from './views/signup/Signup';
-import Menu from './views/menu/Menu';
-import OrderHistory from './views/order_history/order_history';
-import Contact from './views/contact/contact';
-import ContactResponse from './views/contact_response/contact_response';
-import { useFonts } from 'expo-font';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import { Provider } from "react-native-paper";
+import theme from "./theme";
+import Login from "./views/login/Login";
+import Signup from "./views/signup/Signup";
+import Menu from "./views/menu/Menu";
+import OrderHistory from "./views/order_history/order_history";
+import Contact from "./views/contact/contact";
+import ContactResponse from "./views/contact_response/contact_response";
+import { useFonts } from "expo-font";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   const [loaded] = useFonts({
-    LuxuriousRoman: require('./assets/fonts/LuxuriousRoman-Regular.ttf'),
+    LuxuriousRoman: require("./assets/fonts/LuxuriousRoman-Regular.ttf"),
   });
 
   if (!loaded) {
@@ -43,7 +43,7 @@ export default function App() {
             name='Order History'
             component={OrderHistory}
             options={{
-              headerTintColor: 'white',
+              headerTintColor: "white",
               headerStyle: {
                 backgroundColor: theme.colors.accent,
               },
@@ -53,7 +53,7 @@ export default function App() {
             name='Contact'
             component={Contact}
             options={{
-              headerTintColor: 'white',
+              headerTintColor: "white",
               headerStyle: {
                 backgroundColor: theme.colors.accent,
               },

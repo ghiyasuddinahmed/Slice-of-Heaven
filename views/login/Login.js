@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { Button, Text, TextInput, Title } from 'react-native-paper';
-import globalStyles from '../../globalStyles';
-import styles from './styles';
+import React, { useState } from "react";
+import { View, Alert } from "react-native";
+import { Button, Text, TextInput, Title } from "react-native-paper";
+import globalStyles from "../../globalStyles";
+import styles from "./styles";
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (err) {
+      Alert.alert(err);
+    }
+  };
 
   return (
     <View style={globalStyles.container}>
-      <View style={globalStyles.titleBox}>
-        <Title style={[styles.font, globalStyles.title]}>SLICE OF HEAVEN</Title>
+      <View style={globalStyles.centerBox}>
+        <Title style={globalStyles.title}>SLICE OF HEAVEN</Title>
       </View>
-      <View style={globalStyles.titleBox}>
+      <View style={globalStyles.centerBox}>
         <Title style={globalStyles.pageTitle}>SIGN IN</Title>
       </View>
       <TextInput
@@ -31,10 +41,7 @@ export default function Login({ navigation }) {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button
-        mode='contained'
-        onPress={() => navigation.navigate('Contact_Response')}
-      >
+      <Button mode='contained' onPress={handleLogin}>
         Login
       </Button>
       <View style={styles.lineContainer}>
@@ -53,14 +60,14 @@ export default function Login({ navigation }) {
         </Button>
       </View>
 
-      <View style={globalStyles.titleBox}>
+      <View style={globalStyles.centerBox}>
         <Text>
           Don't have an account?
           <Text
             style={globalStyles.link}
-            onPress={() => navigation.navigate('Signup')}
+            onPress={() => navigation.navigate("Signup")}
           >
-            {' '}
+            {" "}
             Sign up
           </Text>
         </Text>

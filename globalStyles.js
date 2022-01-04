@@ -9,13 +9,13 @@ const globalStyles = StyleSheet.create({
     height: '100%',
     backgroundColor: theme.colors.background,
   },
-  titleBox: {
+  centerBox: {
     justifyContent: 'center',
     flexDirection: 'row',
     width: '100%',
   },
   input: {
-    backgroundColor: theme.colors.surface,
+    elevation: 24,
   },
   title: {
     fontSize: 24,
@@ -32,6 +32,11 @@ const globalStyles = StyleSheet.create({
 
   link: {
     color: theme.colors.primary,
+  },
+
+  longText: {
+    flex: 1,
+    flexWrap: 'wrap',
   },
 });
 

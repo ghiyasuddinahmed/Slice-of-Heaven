@@ -1,25 +1,25 @@
-import { StyleSheet } from 'react-native';
-import theme from '../../theme';
+import { StyleSheet } from "react-native";
+import theme from "../../theme";
 
 const styles = StyleSheet.create({
   container: {
-    padding: '2%',
-    height: '100%',
+    padding: "2%",
+    height: "100%",
     backgroundColor: theme.colors.background,
   },
   imageContainer: {
     width: 120,
     height: 120,
     borderRightWidth: 2,
-    borderColor: 'grey',
+    borderColor: "grey",
   },
   header: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginBottom: 20,
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
   },
   response_text: {
-    fontFamily: 'LuxuriousRoman',
+    fontFamily: "LuxuriousRoman",
     fontSize: 20,
   },
   cards: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 3,
     borderTopWidth: 3,
     borderRadius: 50,
-    borderColor: 'white',
+    borderColor: "white",
     padding: 10,
   },
   submitBtn: {
@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
     margin: 3,
   },
   btn: {
-    width: '50%',
+    width: "50%",
   },
   btnContainer: {
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
   },
 });
 

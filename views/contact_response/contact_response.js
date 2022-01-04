@@ -1,10 +1,10 @@
-import { View, Image } from 'react-native';
-import { Button, Text, Card } from 'react-native-paper';
-import logo from '../../assets/logo-transparent.png';
-import React from 'react';
+import { View, Image } from "react-native";
+import { Button, Text, Card } from "react-native-paper";
+import logo from "../../assets/logo-transparent.png";
+import React from "react";
 
-import globalStyles from '../../globalStyles';
-import styles from './styles';
+import globalStyles from "../../globalStyles";
+import styles from "./styles";
 
 export default function ContactResponse({ navigation }) {
   return (
@@ -17,7 +17,7 @@ export default function ContactResponse({ navigation }) {
       <Button
         icon='page-next-outline'
         mode='contained'
-        color={'white'}
+        color={"white"}
         onPress={() => navigation.goBack()}
         styles={globalStyles.button}
       >
